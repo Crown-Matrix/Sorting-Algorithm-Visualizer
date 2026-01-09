@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Crown-Matrix">
+    <title>Sorting Algorithm Playground</title>
+    <link rel="stylesheet" href="./playground-styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./playground.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="../homepage/homepage.html" class="btn btn-secondary m-3" id="homepage-btn">← Back to Homepage</a>
+    </nav>
+
+    <div class="header display-4 text-center">
+        <h1 class="display-2"><small><em><i><small><span id="algorithm-title"></span> Playground</small></i> </em></small></h1>
+        <p id="algorithm-description"></p>
+        
+    </div>
+    <div class="main container-fluid">
+
+        <div id="array-container" class="container-fluid">
+            <!-- Array bars will be rendered here -->
+        </div>
+
+<div id="controls" class="d-flex justify-content-center align-items-center flex-wrap">
+  
+  <!-- Array Size Slider -->
+  <div class="mx-3 d-flex flex-column align-items-center justify-content-center" style="flex: 1; min-width: 200px;">
+    <div class="d-flex align-items-center justify-content-center mb-2">
+      <label for="array-size" class="form-label text-center mb-0">Array Size:</label>
+      <span id="array-size-value" class="mx-2">20</span>
+      <span hidden id="lockpad-span">🔒</span>
+    </div>
+    <input type="range" min="1" max="40" step="1" class="form-range w-100" id="array-size" value="20">
+  </div>
+  <div class="hr mx-3"></div>
+
+  <!-- Buttons -->
+    <button id="generate-array" class="btn btn-primary">Generate Array</button>
+    <div class="hr mx-3"></div>
+    <button id="sort-array" class="btn btn-success" disabled>Sort Array</button>
+    <div class="hr mx-3"></div>
+    <button id="skip-sort" class="btn btn-danger" disabled>Skip Sort</button>
+    <div class="hr mx-3"></div>
+
+  <!-- Sorting Speed Slider -->
+  <div class="mx-3 d-flex flex-column align-items-center justify-content-center" style="flex: 1; min-width: 200px;">
+    <div class="d-flex flex-column align-items-center w-100 mb-2">
+      <label for="speed-range" class="form-label text-center mb-0">Sorting Speed:</label>
+      <input type="range" class="form-range w-100" min="0" max="1" step="0.01" id="speed-range" value="0.5">
+    </div>
+  </div>
+</div>
+      <div id="count-container"></div>
+      <div id="comparison-count" class="text-center justify-content-center">
+        <h5 class="mt-2"><span id='comparison-text'>Comparisons: </span><span id="comparison-int">0</span></h5>
+      </div>
+    </div>
+<div id="table-info" class="text-center mt-4">
+    <table id="complexity-table"> <!--Time/Space complexity // best/average/worst-->
+      <tr>
+        <th colspan="4" style="font-weight: bold;">Time and Space Complexity</th>
+      </tr>
+        <tr>
+            <th>Best Time</th>
+            <th>Average Time</th>
+            <th>Worst Time</th>
+            <th>Space Complexity</th>
+        </tr>
+        <tr>
+            <td id="best-time"></td>
+            <td id="avg-time"></td>
+            <td id="worst-time"></td>
+            <td id="space-complexity"></td>
+        </tr>
+    </table>
+    <table id="key-table">
+      <tr>
+        <th>Key:</th>
+        <td>n</td>
+        <td class="radix counting" hidden>k</td>
+        <td class="radix" hidden>d</td>
+      </tr>
+      <tr>
+        <th colspan="1">Description:</th>
+        <td>Number of elements in the array</td>
+        <td class="radix counting" hidden>Range of elements in the array</td>
+        <td class="radix" hidden>Maximum amount of digits in an array element</td>
+    </table>
+</div>
+<div class="container-fluid" id="array-input-div">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <label for="array-input" class="form-label">Or enter your own array:</label>
+            <input type="text" id="array-input" class="form-control" placeholder="e.g., 5,3,8,1,2">
+        </div>
+  </div>
+</div>
+</body>
+</html>

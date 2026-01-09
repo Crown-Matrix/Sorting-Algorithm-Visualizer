@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sorting Algorithm Visualizer - Interactive visualization of popular sorting algorithms">
+    <meta name="author" content="Crown-Matrix">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="./homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./homepage.js" defer></script>
+</head>
+<body>
+    <div id="content">
+        <div id="header" class="display-4">
+            <h1 class="display-2"><small><em>Sorting Algorithm Visualizer</em></small></h1>
+            <p>Interactive visualization of popular sorting algorithms</p>
+            <p>Only Compatible For Large Screens</p>
+        </div>
+            <div id="grid-wrapper">
+            <div id="main" class="container-fluid">
+                <div class="row row-md-10 justify-content-center" id="first-row">
+                    <div class="col-sm-2 card" id="bubble">Bubble<br>Sort</div>
+                    <div class="col-sm-1 col-md-0 separator"></div>
+                    <div class="col-sm-2 card" id="selection">Selection<br>Sort</div>
+                    <div class="col-sm-1 col-md-0 separator"></div>
+                    <div class="col-sm-2 card" id="insertion">Insertion<br>Sort</div>
+                </div>
+            </div>
+            <div id="main" class="container-fluid">
+                <div class="row row-md-10 justify-content-center" id="first-row">
+                    <div class="col-sm-2 card" id="quick">Quick Sort</div>
+                    <div class="col-sm-1 col-md-0 separator"></div>
+                    <div class="col-sm-2 card" id="radix">Radix<br>Sort</div>
+                    <div class="col-sm-1 col-md-0 separator"></div>
+                    <div class="col-sm-2 card" id="counting">Counting<br>Sort</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
